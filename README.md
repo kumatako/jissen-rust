@@ -30,3 +30,12 @@ RPN（Reverse Polish Notation、逆ポーランド記法）
 トレイト境界？　→ 8-1-2
 
 ライフタイム？ → 7章
+
+### 3-3 第一段階：初歩的な実装
+
+借用？　→ 第7章
+
+`unimplimented!()`マクロ
+- https://doc.rust-lang.org/std/macro.unimplemented.html
+- コンパイルは通る。実行するとpanicが起きる。
+- まだ中身を実装していないが、コンパイルして型チェックしたいときに使う。
