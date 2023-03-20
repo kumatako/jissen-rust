@@ -53,3 +53,13 @@ error[E0308]は`rustc --explain E0308`で説明してくれる。
 - 3-4では、Tは全順序の型しか受け付けたくなかったから<T: Ord>と書いた
 - 3-5でクロージャを使う。
   - Tが全順序の型でなかったらクロージャ(`&|a,b| a.cmp(b)`)を書いた時点でコンパイルエラーが出るから、`<T: Ord>`が不要で`where F: ...`が必要？
+
+### 3-7 仕上げ：ベンチマークプログラム
+3-5までの逐次処理のソートと3-6の並列処理のソートを比較する。
+```
+sorting 67108864 integers (256.0 MB)
+cpu info: 10 physical cores, 10 logical cores
+seq_sort: sorted 67108864 integers in 23.574600584 seconds
+par_sort: sorted 67108864 integers in 2.944962375 seconds
+speed up: 8.01x
+```
