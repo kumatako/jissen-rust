@@ -2,6 +2,7 @@ pub mod first;
 pub mod second;
 pub mod third;
 pub mod utils;
+pub mod forth;
 
 // ソートの方向を表す型を列挙型として定義する
 pub enum SortOrder{
